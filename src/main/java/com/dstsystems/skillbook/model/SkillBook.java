@@ -1,14 +1,12 @@
 package com.dstsystems.skillbook.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by SM on 4/12/18.
  */
 @Entity
+@Table(name = "skillbook")
 public class SkillBook {
 
     @Id

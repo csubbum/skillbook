@@ -13,5 +13,8 @@ public interface SkillBookRepository extends CrudRepository<SkillBook, Long>
 {
 
         List<SkillBook> findByName(String name);
+
+
+        List<SkillBook> findAll();
 }
 

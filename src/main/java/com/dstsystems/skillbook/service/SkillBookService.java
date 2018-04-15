@@ -19,4 +19,8 @@ public class SkillBookService {
         return skillBookRespository.findByName(name);
 
     }
+
+    public List<SkillBook> getSkills() {
+        return skillBookRespository.findAll();
+    }
 }

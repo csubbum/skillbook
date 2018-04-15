@@ -19,10 +19,14 @@ public class SkillBookController {
     @Autowired
     SkillBookService skillBookService;
 
-    @RequestMapping(value = "/getSkill/{name}", method = RequestMethod.GET)
-    Collection<SkillBook> readBookmarks(@PathVariable String name) {
+    @RequestMapping(value = "api/skill/{name}", method = RequestMethod.GET)
+    Collection<SkillBook> getSkill(@PathVariable String name) {
         return skillBookService.searchSkill(name);
     }
 
+    @RequestMapping(value = "api/skills", method = RequestMethod.GET)
+    Collection<SkillBook> getSkills() {
+        return skillBookService.getSkills();
+    }
 
 }
